@@ -72,12 +72,12 @@ console.assert(multiply([1, 2, 3]) == 6);
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse("string"){
+function reverse("jag testar"){
     "use strict";
     for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
   return o;
 }
-console.assert(reverse("string") == "gnirts");
+console.assert(reverse("jag testar") == "ratset gaj");
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
