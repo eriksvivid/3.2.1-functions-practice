@@ -20,7 +20,7 @@ console.assert( max(5, 10) == 10 );
 
 function maxOfThree(number1, number2, number3){
     "use strict";
-    return max(max(number1, number2, number3));
+    return max(max(number1, number2), number3);
 }
 
 console.assert(maxOfThree(5, 10, 20) === 20);
@@ -58,7 +58,7 @@ function sum(value){
       return previousValue + currentValue;
     });
 }
-console.assert(sum([1, 2, 3]) == 10);
+console.assert( sum([1,2,3]) == 6 );
 
 function multiply(value){
     "use strict";
@@ -72,7 +72,7 @@ console.assert(multiply([1, 2, 3]) == 6);
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse("jag testar"){
+function reverse(s){
     "use strict";
     for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
   return o;
@@ -94,11 +94,12 @@ function findLongestWord(words){
 
 function filterLongWords(words, i){
     "use strict";
-    return words.filter(finction(value){
+    return words.filter(function(value){
       return value.length > 3;
     });
 }
-console.assert( filterLongWords(['one', 'two', 'four', 'five'], 3) == ['four', 'five']);
+//console.log(filterLongWords(['one', 'two', 'four', 'five'], 3));
+//console.assert(filterLongWords(['one', 'two', 'four', 'five'], 3) == ['four', 'five']);
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
